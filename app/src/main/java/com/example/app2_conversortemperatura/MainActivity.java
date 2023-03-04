@@ -55,7 +55,7 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
             temperatura = celsiusStrategy.getConversion(value);
 
         }catch (NumberFormatException e){
-            Toast.makeText(this, "Valor digitado é inválido.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Valor inválido.", Toast.LENGTH_SHORT).show();
         }
 
         return temperatura;
@@ -70,7 +70,7 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
             temperatura = fahrenheitStrategy.getConversion(value);
 
         }catch (NumberFormatException e){
-            Toast.makeText(this, "Valor digitado é inválido.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Valor inválido.", Toast.LENGTH_SHORT).show();
         }
 
         return temperatura;
