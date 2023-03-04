@@ -2,15 +2,13 @@ package com.example.app2_conversortemperatura;
 
 import com.example.app2_conversortemperatura.interfaces.ConversorTemperatura;
 
-public class CelsiusStrategy implements ConversorTemperatura {
+public class KelvinStrategy implements ConversorTemperatura {
 
-    public CelsiusStrategy(){};
-    
+    public KelvinStrategy(){}
     @Override
     public Double getConversion(Double temperatura) {
-        double celsius = (temperatura - 32) / 1.8;
-        
-        return celsius;
-    }
+        double kelvin = temperatura + 273.0;
 
+        return kelvin;
+    }
 }

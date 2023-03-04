@@ -10,8 +10,8 @@ public class FahrenheitStrategy implements ConversorTemperatura {
     @Override
     public Double getConversion(Double temperatura) {
 
-        double f = 1.8 * temperatura + 32;
+        double fahrenheit = 1.8 * temperatura + 32;
 
-        return f;
+        return fahrenheit;
     }
 }
