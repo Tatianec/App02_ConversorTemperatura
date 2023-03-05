@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,11 +19,15 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
 
     KelvinStrategy kelvinStrategy = new KelvinStrategy();
     private EditText valueEditText;
-    private Button converterCelsiusButton;
 
-    private Button converterKelvinButton;
-    private Button converterFahrenheitButton;
+    private Button converterTemperatura;
     private TextView convertedValueTextView;
+
+    private RadioButton radioButtonCelsius;
+
+    private RadioButton radioButtonFahrenheit;
+
+    private RadioButton radioButtonKelvin;
 
     @SuppressLint( "MissingInflatedId" )
     @Override
@@ -33,25 +38,26 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
         valueEditText = findViewById(R.id.edittext_value);
         convertedValueTextView = findViewById(R.id.textview_value_converted);
 
-        converterCelsiusButton = findViewById(R.id.button_converter_celsius);
-        converterCelsiusButton.setOnClickListener(this);
+        radioButtonCelsius = findViewById(R.id.radio_button_celsius);
 
-        converterFahrenheitButton = findViewById(R.id.button_converter_fahrenheit);
-        converterFahrenheitButton.setOnClickListener(this);
+        radioButtonFahrenheit = findViewById(R.id.radio_button_fahrenheit);
 
-        converterKelvinButton = findViewById(R.id.button_converter_kelvin);
-        converterKelvinButton.setOnClickListener(this);
+        radioButtonKelvin = findViewById(R.id.radio_button_kelvin);
+
+        converterTemperatura = findViewById(R.id.button_converter_temperatura);
+        converterTemperatura.setOnClickListener(this);
+
     }
-
     @Override
     public void onClick(View view) {
-        if(view == converterCelsiusButton){
+
+        if(radioButtonCelsius.isChecked()){
             getCelsiusConvertion();
         }
-        if (view == converterFahrenheitButton){
+        if(radioButtonFahrenheit.isChecked()){
             getFahrenheitConvertion();
         }
-        if (view == converterKelvinButton){
+        if (radioButtonKelvin.isChecked()){
             getKelvinConvertion();
         }
     }
